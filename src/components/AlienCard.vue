@@ -8,25 +8,29 @@ export default {
 </script>
 
 <template>
-    <main>
-        <div class="container text-center">
-            <img :src="alien.card_images[0].image_url_small" >
-            <p> {{ alien.name }}</p>
-            <p> {{ alien.archetype }}</p>
-        </div>
-    </main>
+    
+    <div class="card text-center">
+        <img :src="alien.card_images[0].image_url_small" >
+        <p class="alien-name mt-2"> {{ alien.name }}</p>
+        <p class="alien-type"> {{ alien.archetype }}</p>
+    </div>
+
 
 </template>
 
 
 <style scoped lang="scss">
 
-main {
-    background-color: orange;
+.card {
+    background-color: #D48F38;
+    color: white;
+    height: 100%;
+    border-radius: 0;
+    border: none;
 }
 
-.container {
-    width: 80%;
-}
+.alien-type {
+    color: black;
+} 
 
 </style>

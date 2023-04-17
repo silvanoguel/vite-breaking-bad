@@ -8,10 +8,9 @@ export default {
 </script>
 
 <template>
-    <h2 class="text-left my-4">{{ title }}</h2>
+    <div class="container">
+        <h2 class="text-left my-4">{{ title }}</h2>
+    </div>
+
 </template>
 
-<style scoped lang="scss">
-
-
-</style>

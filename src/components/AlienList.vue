@@ -1,11 +1,13 @@
 <script>
 import AlienCard from "./AlienCard.vue";
+import AppLoader from "./AppLoader.vue";
 import {store} from "../store";
 
 export default {
     name: "AlienList",
     components: {
-        AlienCard
+        AlienCard,
+        AppLoader
     },
     data() {
         return {
@@ -17,17 +19,31 @@ export default {
 </script>
 
 <template>
-    <h2>lista alieni</h2>
-    <div class="row row-cols-5">
-        <div class="col" v-for="alien in store.aliens" :key="alien.id">
-            <AlienCard :alien="alien"/>
+    <main>
+        <div class="container">
+            <AppLoader v-if="store.loading" />
+            <div class="row row-cols-5 g-3" v-else>
+                <div class="col" v-for="alien in store.aliens" :key="alien.id">
+                    <AlienCard :alien="alien"/>
+                </div> 
+            </div>   
         </div>
-    </div>
+    </main>
+
 
 </template>
 
 
 <style scoped lang="scss">
 
+main {
+    background-color: #D48F38;
+}
+
+.container {
+    width: 80%;
+    padding: 30px;
+    background-color: white;
+}
 
 </style>
