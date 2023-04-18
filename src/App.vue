@@ -24,7 +24,7 @@ export default {
       this.store.loading = true;
       const params = {};
       if (this.store.selectedStatus) {
-        params.status = this.store.selectedStatus;
+        params.archetype = this.store.selectedStatus;
       }
       axios.get(this.store.apiURL, {
         params

@@ -16,9 +16,9 @@ export default {
 <template>
     <div class="container my-3">
         <div class="d-flex justify-content-end">
-            <select class="form-select w-25" name="status" id="status" v-model="store.selectedStatus" @change="$emit('filter')">
+            <select class="form-select w-25" name="archetype" id="archetype" v-model="store.selectedStatus" @change="$emit('filter')">
                 <option value="">All</option>
-                <option :value="status" v-for="status in archetypeOptions">{{ status }}</option>
+                <option :value="archetype" v-for="archetype in archetypeOptions">{{ archetype }}</option>
             </select>
         </div>
     </div>
